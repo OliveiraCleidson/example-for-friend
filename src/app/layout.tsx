@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { Poppins, Geist_Mono, Inter } from "next/font/google";
+import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "~/components/theme-provider";
+import { ModeToggle } from "~/components/theme-toggle";
 
 const poppinsSans = Poppins({
   subsets: ["latin"],
@@ -13,10 +15,6 @@ const interSans = Inter({
   variable: "--font-inter-sans"
 })
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Contabilidade.com",
@@ -29,11 +27,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" suppressHydrationWarning>
       <body
-        className={`${poppinsSans.className} ${geistMono.className} ${interSans.className} antialiased`}
+        className={`${poppinsSans.className} ${interSans.className} antialiased`}
       >
-        {children}
+      <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <ModeToggle />        
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
