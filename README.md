@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Landing Page Example with TailwindCSS & Next.js
 
-## Getting Started
+This repository was created to share and demonstrate how to build a responsive landing page section using **TailwindCSS**, **Next.js**, and **Next Theme**.  
 
-First, run the development server:
+The main goal is to serve as a **practical example for a friend**, showing how to:  
+- Structure a simple landing page with **Next.js**  
+- Apply modern styling with **TailwindCSS**  
+- Manage dark/light modes with **Next Theme**  
+- Implement **responsive design guidelines** so the layout adapts well to mobile, tablet, and desktop  
+
+---
+
+## 📦 Tech Stack
+- [Next.js](https://nextjs.org/) — React framework for building fast and modern web apps  
+- [TailwindCSS](https://tailwindcss.com/) — Utility-first CSS framework  
+- [Next Theme](https://github.com/pacocoursey/next-themes) — Theme management for Next.js  
+
+---
+
+## 🚀 Getting Started
+Clone the repo and install dependencies:
 
 ```bash
+git clone https://github.com/your-username/repo-name.git
+cd repo-name
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The project will be running at http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+⸻
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎯 Purpose
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This is not a production-ready project.  
+It was built as a learning and demonstration repository to teach a friend how to build responsive UIs with Next.js and TailwindCSS, while also sharing ideas, examples, and good practices.
