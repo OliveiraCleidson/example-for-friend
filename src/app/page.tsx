@@ -1,4 +1,6 @@
+"use client"
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 import { Button } from "~/components/ui/button";
 
 
@@ -121,7 +123,13 @@ export function BenefitsTableComponent({ benefits }: { benefits: BenefitsTable }
 }
 
 export default function Home() {
-  const cidade = "Brasília"
+  const searchParams = useSearchParams();
+  const rawCidade = searchParams.get("cidade");
+
+  // Faz o parser: mantém apenas letras, espaços e hífens
+  const cidade = rawCidade
+    ? `em ${decodeURIComponent(rawCidade).trim().replace(/[^a-zA-ZÀ-ÿ\s-]/g, "")}`
+    : "no Brasil";
   return (
     <div>
       <section className="flex flex-col items-center justify-center gap-12 py-7 md:py-44 w-full px-4">
